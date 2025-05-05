@@ -42,6 +42,7 @@ plugins:
       enabled_if_env: 'EXPORT_PDF'
       combined: true
       combined_output_path: pdf/NTCIPx8008.pdf
+      verbose: true
 markdown_extensions:
   - abbr
   - admonition
