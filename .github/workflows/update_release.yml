@@ -27,7 +27,6 @@ jobs:
         run: |
           pip install mkdocs-material pymdown-extensions
           pip install mkdocs-git-revision-date-localized-plugin
-          pip install mkdocs-pdf-export-plugin
           pip install mkdocs-with-pdf
           pip install mike
 
@@ -73,8 +72,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          mike set-default $RELEASE_TAG --allow-undefined
-          mike deploy $RELEASE_TAG --branch=gh-pages --push
+          mike set-default --push latest --allow-undefined
+          mike deploy --branch=gh-pages --push --update-aliases $RELEASE_TAG latest
           
     
       # Step 9: Deploy the site to GitHub Pages (gh-pages branch)
