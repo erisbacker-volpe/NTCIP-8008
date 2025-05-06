@@ -1,7 +1,7 @@
 #
 
 <div style="text-align: center; font-style: italic; font-weight: bold;">
-  TESTING CHANGE A proposal to the NTCIP Joint Committee TESTING CHANGE
+  A proposal to the NTCIP Joint Committee
 </div>
 
 <div style="text-align: center; font-size: 1.5em; font-weight: bold;">
