@@ -29,6 +29,7 @@ jobs:
           pip install mkdocs-git-revision-date-localized-plugin
           pip install mkdocs-pdf-export-plugin
           pip install mkdocs-with-pdf
+          pip install mike
 
       # Step 4: Get release tag, fall back to current date and time if no tag exists
       - name: Get release tag or use date
@@ -66,9 +67,13 @@ jobs:
 
       # Step 8: Build the site (this will generate the PDF if EXPORT_PDF is set)
       - name: Build the site
-        run: mkdocs build
+        run: |
+          RELEASE_TAG=${{ env.RELEASE_TAG }}
+          
+          mike deploy $RELEASE_TAG
+          mike set-default $RELEASE_TAG
     
       # Step 9: Deploy the site to GitHub Pages (gh-pages branch)
-      - name: Deploy to GitHub Pages
-        run: |
-          mkdocs gh-deploy --force --verbose
+      #- name: Deploy to GitHub Pages
+      #  run: |
+      #    mkdocs gh-deploy --force --verbose
