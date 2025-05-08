@@ -40,8 +40,8 @@ plugins:
       type: date
   - to-pdf:
       enabled_if_env: "EXPORT_PDF"
-      verbose: true
       output_path: pdf/NTCIPx8008.pdf
+      download_link: header
 markdown_extensions:
   - abbr
   - admonition
