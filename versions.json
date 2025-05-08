@@ -2,9 +2,7 @@
   {
     "version": "2025-05-08_18-15-34",
     "title": "2025-05-08_18-15-34",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "2025-05-08_17-55-36",
@@ -20,6 +18,13 @@
     "version": "2025-05-06_14-02-34",
     "title": "2025-05-06_14-02-34",
     "aliases": []
+  },
+  {
+    "version": "v0.0.5-testing",
+    "title": "v0.0.5-testing",
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "v0.0.4-testing",
